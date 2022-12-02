@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bonhomme.Properties
+namespace Carrosse_V02.Properties
 {
 
 
