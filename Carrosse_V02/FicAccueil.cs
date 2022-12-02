@@ -152,6 +152,14 @@ namespace Carrosse_V02
             obj.Afficher(g);
             bufferG.Render();
         }
+
+        void DeplacerXfois(Point obj,int nFois)
+        {
+            //nfois = Int32.Parse(textBox1.Text); 
+            obj.Bouger(nFois, 0);
+            obj.Afficher(g);
+            bufferG.Render();
+        }
         #endregion
 
         #region Gestion Bonhomme
