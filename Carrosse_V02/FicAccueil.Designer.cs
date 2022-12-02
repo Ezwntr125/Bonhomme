@@ -41,12 +41,18 @@
             this.pbTV = new System.Windows.Forms.PictureBox();
             this.timerFormes = new System.Windows.Forms.Timer(this.components);
             this.timerCarrosse = new System.Windows.Forms.Timer(this.components);
+            this.btnCreationAlan = new System.Windows.Forms.Button();
+            this.btnCreationNemo = new System.Windows.Forms.Button();
+            this.btnDeplacerAlan = new System.Windows.Forms.Button();
+            this.btnDeplacerNemo = new System.Windows.Forms.Button();
+            this.btnDeplacerXFois = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbTV)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreationPoint
             // 
-            this.btnCreationPoint.Location = new System.Drawing.Point(12, 328);
+            this.btnCreationPoint.Location = new System.Drawing.Point(12, 269);
             this.btnCreationPoint.Name = "btnCreationPoint";
             this.btnCreationPoint.Size = new System.Drawing.Size(118, 23);
             this.btnCreationPoint.TabIndex = 0;
@@ -56,7 +62,7 @@
             // 
             // btnDeplacerPoint
             // 
-            this.btnDeplacerPoint.Location = new System.Drawing.Point(163, 328);
+            this.btnDeplacerPoint.Location = new System.Drawing.Point(175, 269);
             this.btnDeplacerPoint.Name = "btnDeplacerPoint";
             this.btnDeplacerPoint.Size = new System.Drawing.Size(118, 23);
             this.btnDeplacerPoint.TabIndex = 1;
@@ -66,7 +72,7 @@
             // 
             // btnCreationCercle
             // 
-            this.btnCreationCercle.Location = new System.Drawing.Point(12, 357);
+            this.btnCreationCercle.Location = new System.Drawing.Point(12, 298);
             this.btnCreationCercle.Name = "btnCreationCercle";
             this.btnCreationCercle.Size = new System.Drawing.Size(118, 23);
             this.btnCreationCercle.TabIndex = 3;
@@ -76,7 +82,7 @@
             // 
             // btnTimerFormes
             // 
-            this.btnTimerFormes.Location = new System.Drawing.Point(342, 328);
+            this.btnTimerFormes.Location = new System.Drawing.Point(342, 269);
             this.btnTimerFormes.Name = "btnTimerFormes";
             this.btnTimerFormes.Size = new System.Drawing.Size(266, 52);
             this.btnTimerFormes.TabIndex = 2;
@@ -86,7 +92,7 @@
             // 
             // btnCreationRectangle
             // 
-            this.btnCreationRectangle.Location = new System.Drawing.Point(12, 386);
+            this.btnCreationRectangle.Location = new System.Drawing.Point(12, 327);
             this.btnCreationRectangle.Name = "btnCreationRectangle";
             this.btnCreationRectangle.Size = new System.Drawing.Size(118, 23);
             this.btnCreationRectangle.TabIndex = 5;
@@ -96,7 +102,7 @@
             // 
             // btnCreationCarrosse
             // 
-            this.btnCreationCarrosse.Location = new System.Drawing.Point(12, 415);
+            this.btnCreationCarrosse.Location = new System.Drawing.Point(12, 356);
             this.btnCreationCarrosse.Name = "btnCreationCarrosse";
             this.btnCreationCarrosse.Size = new System.Drawing.Size(118, 23);
             this.btnCreationCarrosse.TabIndex = 4;
@@ -106,7 +112,7 @@
             // 
             // btnDeplacerCarrosse
             // 
-            this.btnDeplacerCarrosse.Location = new System.Drawing.Point(163, 415);
+            this.btnDeplacerCarrosse.Location = new System.Drawing.Point(175, 356);
             this.btnDeplacerCarrosse.Name = "btnDeplacerCarrosse";
             this.btnDeplacerCarrosse.Size = new System.Drawing.Size(118, 23);
             this.btnDeplacerCarrosse.TabIndex = 6;
@@ -116,7 +122,7 @@
             // 
             // btnTimerCarrosse
             // 
-            this.btnTimerCarrosse.Location = new System.Drawing.Point(342, 386);
+            this.btnTimerCarrosse.Location = new System.Drawing.Point(342, 327);
             this.btnTimerCarrosse.Name = "btnTimerCarrosse";
             this.btnTimerCarrosse.Size = new System.Drawing.Size(266, 52);
             this.btnTimerCarrosse.TabIndex = 7;
@@ -126,7 +132,7 @@
             // 
             // btnEraseAll
             // 
-            this.btnEraseAll.Location = new System.Drawing.Point(670, 328);
+            this.btnEraseAll.Location = new System.Drawing.Point(670, 269);
             this.btnEraseAll.Name = "btnEraseAll";
             this.btnEraseAll.Size = new System.Drawing.Size(118, 23);
             this.btnEraseAll.TabIndex = 8;
@@ -138,7 +144,7 @@
             // 
             this.pbTV.Location = new System.Drawing.Point(12, 12);
             this.pbTV.Name = "pbTV";
-            this.pbTV.Size = new System.Drawing.Size(776, 310);
+            this.pbTV.Size = new System.Drawing.Size(776, 251);
             this.pbTV.TabIndex = 9;
             this.pbTV.TabStop = false;
             // 
@@ -150,11 +156,74 @@
             // 
             this.timerCarrosse.Tick += new System.EventHandler(this.timerCarrosse_Tick);
             // 
+            // btnCreationAlan
+            // 
+            this.btnCreationAlan.Location = new System.Drawing.Point(12, 385);
+            this.btnCreationAlan.Name = "btnCreationAlan";
+            this.btnCreationAlan.Size = new System.Drawing.Size(118, 23);
+            this.btnCreationAlan.TabIndex = 10;
+            this.btnCreationAlan.Text = "Alan ";
+            this.btnCreationAlan.UseVisualStyleBackColor = true;
+            this.btnCreationAlan.Click += new System.EventHandler(this.btnCreationAlan_Click);
+            // 
+            // btnCreationNemo
+            // 
+            this.btnCreationNemo.Location = new System.Drawing.Point(12, 414);
+            this.btnCreationNemo.Name = "btnCreationNemo";
+            this.btnCreationNemo.Size = new System.Drawing.Size(118, 20);
+            this.btnCreationNemo.TabIndex = 11;
+            this.btnCreationNemo.Text = "Nemo";
+            this.btnCreationNemo.UseVisualStyleBackColor = true;
+            this.btnCreationNemo.Click += new System.EventHandler(this.btnCreationNemo_Click);
+            // 
+            // btnDeplacerAlan
+            // 
+            this.btnDeplacerAlan.Location = new System.Drawing.Point(175, 385);
+            this.btnDeplacerAlan.Name = "btnDeplacerAlan";
+            this.btnDeplacerAlan.Size = new System.Drawing.Size(118, 23);
+            this.btnDeplacerAlan.TabIndex = 12;
+            this.btnDeplacerAlan.Text = "Deplacer Alan";
+            this.btnDeplacerAlan.UseVisualStyleBackColor = true;
+            this.btnDeplacerAlan.Click += new System.EventHandler(this.btnDeplacerAlan_Click);
+            // 
+            // btnDeplacerNemo
+            // 
+            this.btnDeplacerNemo.Location = new System.Drawing.Point(175, 414);
+            this.btnDeplacerNemo.Name = "btnDeplacerNemo";
+            this.btnDeplacerNemo.Size = new System.Drawing.Size(118, 20);
+            this.btnDeplacerNemo.TabIndex = 13;
+            this.btnDeplacerNemo.Text = "Deplacer Nemo";
+            this.btnDeplacerNemo.UseVisualStyleBackColor = true;
+            this.btnDeplacerNemo.Click += new System.EventHandler(this.btnDeplacerNemo_Click);
+            // 
+            // btnDeplacerXFois
+            // 
+            this.btnDeplacerXFois.Location = new System.Drawing.Point(342, 414);
+            this.btnDeplacerXFois.Name = "btnDeplacerXFois";
+            this.btnDeplacerXFois.Size = new System.Drawing.Size(100, 20);
+            this.btnDeplacerXFois.TabIndex = 14;
+            this.btnDeplacerXFois.Text = "Deplacer X fois";
+            this.btnDeplacerXFois.UseVisualStyleBackColor = true;
+            this.btnDeplacerXFois.Click += new System.EventHandler(this.btnDeplacerXFois_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(448, 414);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 20);
+            this.textBox1.TabIndex = 15;
+            // 
             // FicAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDeplacerXFois);
+            this.Controls.Add(this.btnDeplacerNemo);
+            this.Controls.Add(this.btnDeplacerAlan);
+            this.Controls.Add(this.btnCreationNemo);
+            this.Controls.Add(this.btnCreationAlan);
             this.Controls.Add(this.pbTV);
             this.Controls.Add(this.btnEraseAll);
             this.Controls.Add(this.btnTimerCarrosse);
@@ -169,6 +238,7 @@
             this.Text = "Dessin Animé";
             ((System.ComponentModel.ISupportInitialize)(this.pbTV)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -186,6 +256,12 @@
         private System.Windows.Forms.PictureBox pbTV;
         private System.Windows.Forms.Timer timerFormes;
         private System.Windows.Forms.Timer timerCarrosse;
+        private System.Windows.Forms.Button btnCreationAlan;
+        private System.Windows.Forms.Button btnCreationNemo;
+        private System.Windows.Forms.Button btnDeplacerAlan;
+        private System.Windows.Forms.Button btnDeplacerNemo;
+        private System.Windows.Forms.Button btnDeplacerXFois;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

@@ -12,10 +12,14 @@ namespace Carrosse_V02
 {
     public partial class FicAccueil : Form
     {
+        #region Données Membres
         private Point pointTest;
         private Cercle cercleTest;
         private Rectangle rectangleTest;
         private Carrosse carrosse;
+        private Bonhomme alan;
+        private Bonhomme nemo;
+        
 
         private BufferedGraphics bufferG = null;
         private Graphics g;
@@ -28,6 +32,7 @@ namespace Carrosse_V02
             //Par défaut, il est noir
             g.Clear(pbTV.BackColor);
         }
+        #endregion
 
         #region Gestion Point
         private void btnCreationPoint_Click(object sender, EventArgs e)
@@ -132,6 +137,70 @@ namespace Carrosse_V02
         }
         #endregion
 
+        #region Fonctions
+        void EnabledTrue(params Button[] mesBoutons)
+        {
+            foreach (Button button in mesBoutons)
+            {
+                button.Enabled = true;
+            }
+        }
+
+        void Deplacer(Point obj)
+        {
+            obj.Bouger(5, 0);
+            obj.Afficher(g);
+            bufferG.Render();
+        }
+        #endregion
+
+        #region Gestion Bonhomme
+        private void btnCreationAlan_Click(object sender, EventArgs e)
+        {
+            this.alan = new Bonhomme(this.pbTV,10,75,30,60);
+            this.alan.Afficher(g);
+            bufferG.Render();
+
+            //Activation Bouton Deplacer
+            EnabledTrue(btnDeplacerAlan);
+        }
+
+        private void btnCreationNemo_Click(object sender, EventArgs e)
+        {
+            this.nemo = new Bonhomme(this.pbTV, 100, 45, 30, 75, Color.RoyalBlue, Color.Silver);
+            this.nemo.Afficher(g);
+            bufferG.Render();
+
+            EnabledTrue(btnDeplacerNemo, btnDeplacerXFois);
+        }
+
+        private void btnDeplacerAlan_Click(object sender, EventArgs e)
+        {
+            alan.Cacher(g);
+            Deplacer(alan);
+        }
+
+        private void btnDeplacerNemo_Click(object sender, EventArgs e)
+        {
+            Deplacer(nemo);
+        }
+
+        private void btnDeplacerXFois_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int result = Int32.Parse(textBox1.Text);
+                //DeplacerXFois(nemo, Int32.Parse(textBox1.Text);
+                DeplacerXFois(nemo, result);
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Unable to parse '" + textBox1.Text + "'");
+            }
+        }
+
+        #endregion
+
         #region Effacer
         private void btnEraseAll_Click(object sender, EventArgs e)
         {
@@ -139,6 +208,11 @@ namespace Carrosse_V02
                 bufferG.Render();
             
         }
+
+
+
         #endregion
+
+
     }
 }

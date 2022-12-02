@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bonhomme.cs" />
     <Compile Include="Carrosse.cs" />
     <Compile Include="Cercle.cs" />
     <Compile Include="FicAccueil.cs">
