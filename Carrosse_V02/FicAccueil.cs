@@ -175,7 +175,7 @@ namespace Carrosse_V02
 
         private void btnCreationNemo_Click(object sender, EventArgs e)
         {
-            this.nemo = new Bonhomme(this.pbTV, 100, 45, 30, 75, Color.RoyalBlue, Color.Silver);
+            this.nemo = new Bonhomme(this.pbTV, 100, 45, 30, 75);
             this.nemo.Afficher(g);
             bufferG.Render();
 
@@ -199,7 +199,7 @@ namespace Carrosse_V02
             {
                 int result = Int32.Parse(textBox1.Text);
                 //DeplacerXFois(nemo, Int32.Parse(textBox1.Text);
-                DeplacerXFois(nemo, result);
+                DeplacerXfois(nemo, result);
             }
             catch(FormatException)
             {

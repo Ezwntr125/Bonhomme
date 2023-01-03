@@ -17,11 +17,10 @@ namespace Carrosse_V02
         #endregion
 
         #region Constructeurs 
-        public Bonhomme(PictureBox hebergeur, int xsg, int ysg, int longueur, int hauteur) : base()
-        #endregion
+        public Bonhomme(PictureBox hebergeur, int xsg, int ysg, int longueur, int hauteur) : base(hebergeur, xsg, ysg,longueur, hauteur)
+        {
 
-        #region Accesseurs
-
+        }
         #endregion
 
         #region Méthodes

@@ -17,3 +17,6 @@ C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\obj\Debug\Carrosse_V0
 C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\obj\Debug\Carrosse_V02.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\obj\Debug\Carrosse_V02.exe
 C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\obj\Debug\Carrosse_V02.pdb
+C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\bin\Debug\Carrosse_V02.exe.config
+C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\bin\Debug\Carrosse_V02.exe
+C:\Users\User\Documents\IS Bloc 2\C#\Bonhomme\Carrosse_V02\bin\Debug\Carrosse_V02.pdb
