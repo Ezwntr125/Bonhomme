@@ -47,6 +47,10 @@
             this.btnDeplacerNemo = new System.Windows.Forms.Button();
             this.btnDeplacerXFois = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnCreationRectangleMovable = new System.Windows.Forms.Button();
+            this.btnTournerRectangleMovable = new System.Windows.Forms.Button();
+            this.btnTournerRectangleMovableXfois = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbTV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +88,7 @@
             // 
             this.btnTimerFormes.Location = new System.Drawing.Point(342, 269);
             this.btnTimerFormes.Name = "btnTimerFormes";
-            this.btnTimerFormes.Size = new System.Drawing.Size(266, 52);
+            this.btnTimerFormes.Size = new System.Drawing.Size(131, 52);
             this.btnTimerFormes.TabIndex = 2;
             this.btnTimerFormes.Text = "Activer/Desactiver Timer ssi Point et Cercle existent";
             this.btnTimerFormes.UseVisualStyleBackColor = true;
@@ -124,7 +128,7 @@
             // 
             this.btnTimerCarrosse.Location = new System.Drawing.Point(342, 327);
             this.btnTimerCarrosse.Name = "btnTimerCarrosse";
-            this.btnTimerCarrosse.Size = new System.Drawing.Size(266, 52);
+            this.btnTimerCarrosse.Size = new System.Drawing.Size(131, 52);
             this.btnTimerCarrosse.TabIndex = 7;
             this.btnTimerCarrosse.Text = "Activer/Desactiver Timer Carrosse";
             this.btnTimerCarrosse.UseVisualStyleBackColor = true;
@@ -132,7 +136,7 @@
             // 
             // btnEraseAll
             // 
-            this.btnEraseAll.Location = new System.Drawing.Point(670, 269);
+            this.btnEraseAll.Location = new System.Drawing.Point(670, 12);
             this.btnEraseAll.Name = "btnEraseAll";
             this.btnEraseAll.Size = new System.Drawing.Size(118, 23);
             this.btnEraseAll.TabIndex = 8;
@@ -198,7 +202,7 @@
             // 
             // btnDeplacerXFois
             // 
-            this.btnDeplacerXFois.Location = new System.Drawing.Point(342, 414);
+            this.btnDeplacerXFois.Location = new System.Drawing.Point(299, 413);
             this.btnDeplacerXFois.Name = "btnDeplacerXFois";
             this.btnDeplacerXFois.Size = new System.Drawing.Size(100, 20);
             this.btnDeplacerXFois.TabIndex = 14;
@@ -208,23 +212,64 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(448, 414);
+            this.textBox1.Location = new System.Drawing.Point(405, 414);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
+            this.textBox1.Size = new System.Drawing.Size(68, 20);
             this.textBox1.TabIndex = 15;
+            // 
+            // btnCreationRectangleMovable
+            // 
+            this.btnCreationRectangleMovable.Location = new System.Drawing.Point(522, 269);
+            this.btnCreationRectangleMovable.Name = "btnCreationRectangleMovable";
+            this.btnCreationRectangleMovable.Size = new System.Drawing.Size(93, 52);
+            this.btnCreationRectangleMovable.TabIndex = 16;
+            this.btnCreationRectangleMovable.Text = "Creation Rectangle Movable";
+            this.btnCreationRectangleMovable.UseVisualStyleBackColor = true;
+            this.btnCreationRectangleMovable.Click += new System.EventHandler(this.btnCreationRectangleMovable_Click);
+            // 
+            // btnTournerRectangleMovable
+            // 
+            this.btnTournerRectangleMovable.Location = new System.Drawing.Point(522, 327);
+            this.btnTournerRectangleMovable.Name = "btnTournerRectangleMovable";
+            this.btnTournerRectangleMovable.Size = new System.Drawing.Size(93, 52);
+            this.btnTournerRectangleMovable.TabIndex = 17;
+            this.btnTournerRectangleMovable.Text = "Tourner Rectangle Pi/12";
+            this.btnTournerRectangleMovable.UseVisualStyleBackColor = true;
+            this.btnTournerRectangleMovable.Click += new System.EventHandler(this.btnTournerRectangleMovable_Click);
+            // 
+            // btnTournerRectangleMovableXfois
+            // 
+            this.btnTournerRectangleMovableXfois.Location = new System.Drawing.Point(621, 269);
+            this.btnTournerRectangleMovableXfois.Name = "btnTournerRectangleMovableXfois";
+            this.btnTournerRectangleMovableXfois.Size = new System.Drawing.Size(93, 52);
+            this.btnTournerRectangleMovableXfois.TabIndex = 18;
+            this.btnTournerRectangleMovableXfois.Text = "Tourner Rectangle de PiX";
+            this.btnTournerRectangleMovableXfois.UseVisualStyleBackColor = true;
+            this.btnTournerRectangleMovableXfois.Click += new System.EventHandler(this.btnTournerRectangleMovableXfois_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(720, 301);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(68, 20);
+            this.textBox2.TabIndex = 19;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // FicAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnTournerRectangleMovableXfois);
+            this.Controls.Add(this.btnTournerRectangleMovable);
+            this.Controls.Add(this.btnCreationRectangleMovable);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnDeplacerXFois);
             this.Controls.Add(this.btnDeplacerNemo);
             this.Controls.Add(this.btnDeplacerAlan);
             this.Controls.Add(this.btnCreationNemo);
             this.Controls.Add(this.btnCreationAlan);
-            this.Controls.Add(this.pbTV);
             this.Controls.Add(this.btnEraseAll);
             this.Controls.Add(this.btnTimerCarrosse);
             this.Controls.Add(this.btnDeplacerCarrosse);
@@ -234,6 +279,7 @@
             this.Controls.Add(this.btnTimerFormes);
             this.Controls.Add(this.btnDeplacerPoint);
             this.Controls.Add(this.btnCreationPoint);
+            this.Controls.Add(this.pbTV);
             this.Name = "FicAccueil";
             this.Text = "Dessin Animé";
             ((System.ComponentModel.ISupportInitialize)(this.pbTV)).EndInit();
@@ -262,6 +308,10 @@
         private System.Windows.Forms.Button btnDeplacerNemo;
         private System.Windows.Forms.Button btnDeplacerXFois;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCreationRectangleMovable;
+        private System.Windows.Forms.Button btnTournerRectangleMovable;
+        private System.Windows.Forms.Button btnTournerRectangleMovableXfois;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 

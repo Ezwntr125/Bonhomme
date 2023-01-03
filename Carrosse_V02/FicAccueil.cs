@@ -19,6 +19,7 @@ namespace Carrosse_V02
         private Carrosse carrosse;
         private Bonhomme alan;
         private Bonhomme nemo;
+        private RectangleMovable rectangleMovableTest;
         
 
         private BufferedGraphics bufferG = null;
@@ -160,6 +161,12 @@ namespace Carrosse_V02
             obj.Afficher(g);
             bufferG.Render();
         }
+
+        void EffacerTout()
+        {
+            g.Clear(pbTV.BackColor);
+            bufferG.Render();
+        }
         #endregion
 
         #region Gestion Bonhomme
@@ -175,7 +182,7 @@ namespace Carrosse_V02
 
         private void btnCreationNemo_Click(object sender, EventArgs e)
         {
-            this.nemo = new Bonhomme(this.pbTV, 100, 45, 30, 75, Color.RoyalBlue, Color.Silver);
+            this.nemo = new Bonhomme(this.pbTV, 100, 45, 30, 75);
             this.nemo.Afficher(g);
             bufferG.Render();
 
@@ -199,7 +206,7 @@ namespace Carrosse_V02
             {
                 int result = Int32.Parse(textBox1.Text);
                 //DeplacerXFois(nemo, Int32.Parse(textBox1.Text);
-                DeplacerXFois(nemo, result);
+                DeplacerXfois(nemo, result);
             }
             catch(FormatException)
             {
@@ -207,6 +214,38 @@ namespace Carrosse_V02
             }
         }
 
+        #endregion
+
+        #region Gestion du Rectangle Movable
+        private void btnCreationRectangleMovable_Click(object sender, EventArgs e)
+        {
+            rectangleMovableTest = new RectangleMovable(this.pbTV,100,100,25,85,2*Math.PI / 12, Color.Violet)
+            this.rectangleMovableTest.Afficher(g);
+            bufferG.Render();
+            
+        }
+
+        private void btnTournerRectangleMovable_Click(object sender, EventArgs e)
+        {
+            EffacerTout();
+            /*
+            ou bien 
+            rectangleMovableTest.Cacher(g);
+            bufferG.Render();
+            */
+
+            this.rectangleMovableTest.Bouger(0, 0, 1 * Math.PI / 12);
+            this.rectangleMovableTest.Afficher(g);
+            bufferG.Render();
+        }
+
+        private void btnTournerRectangleMovableXfois_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(textBox2.Text);
+            this.rectangleMovableTest.Bouger(0, 0, 1 * Math.PI / a);
+            this.rectangleMovableTest.Afficher(g);
+            bufferG.Render();
+        }
         #endregion
 
         #region Effacer
@@ -219,8 +258,8 @@ namespace Carrosse_V02
 
 
 
-        #endregion
 
+        #endregion
 
     }
 }
